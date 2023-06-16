@@ -60,13 +60,14 @@ strongswan::conn { 'IPsec-IKEv2':
 
 strongswan::conn { 'IKEv2-EAP':
   options => {
-    "also"          => "IPSec-IKEv2",
+    "also"          => "IPsec-IKEv2",
     "leftauth"      => "pubkey",
     "leftsendcert"  => "always",
     "rightauth"     => "eap-mschapv2",
     "rightsendcert" => "never",
     "eap_identity"  => "%any",
   }
+}
 ```
 
 ### ipsec.secrets
